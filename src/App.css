@@ -1,0 +1,145 @@
+/* GENERAL RULES */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans";
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* border: solid red 2px; */
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* HEADER */
+
+header section:first-child {
+  /* background-color: red; */
+  padding: 8px 0;
+  border-bottom: 2px solid #e8ebeb;
+}
+
+header section:first-child img {
+  height: 60px;
+}
+
+.hero {
+  display: flex;
+  padding: 20px 0;
+}
+
+.hero p {
+  color: #868a8a;
+  line-height: 28px;
+  font-size: 19px;
+}
+
+.hero img {
+  width: 350px;
+  height: 198px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.hero div {
+  margin-right: 40px;
+}
+
+/* MAIN */
+
+main {
+  background-color: #f2f5f5;
+  padding-top: 40px;
+}
+
+.main-container {
+  display: flex;
+  gap: 30px;
+}
+
+.col-right {
+  height: 100px;
+  border: solid green 2px;
+  width: 350px;
+}
+
+.col-left {
+  border: solid blue 2px;
+  flex: 1;
+}
+
+.col-left section {
+  margin-bottom: 30px;
+}
+
+.meals-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 48%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+article img {
+  height: 132px;
+  width: 132px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+article .description {
+  font-size: 14px;
+  line-height: 20px;
+  color: #868a8a;
+  /* border: solid red 1px; */
+  height: 43px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.price-and-popular {
+  display: flex;
+}
+
+/* img {
+  height: 200px;
+} */
+
+/* img {
+  height: 500px;
+} */
+
+h2 {
+  font-weight: bold;
+}
