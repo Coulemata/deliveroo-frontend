@@ -12,12 +12,9 @@ import logo from "./assets/img/logo.svg";
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [addMeal, setAddMeal] = useState([0]);
+  const [addMeal, setAddMeal] = useState([]);
+  const newAddMeal = "";
 
-  const handleAddToCart =() => ({
-
-
-  })
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,11 +63,11 @@ function App() {
                     <div className="meals-container">
                       {category.meals.map((meal) => {
                         return (
-                          <article key={meal.id}>
-                            <div onClick={() =>{newAddMeal = [...addMeal]; 
-                            newAddMeal.push(meals.id) 
+                          <article key={meal.id} onClick={() =>{ const newAddMeal = [...addMeal]; 
+                            newAddMeal.push({title:meal.title, price: meal.price});
                              setAddMeal(newAddMeal)
-                            }}>
+                             }}>
+                            <div >
                               <h3>{meal.title}</h3>
                               <p className="description">{meal.description}</p>
                               <div className="price-and-popular">
@@ -96,8 +93,8 @@ function App() {
             })}
           </div>
           <aside className="col-right" id="panier">
-
-          <button> Valider mon panier </button>
+           <p className={newAddMeal ? "Ajouter au panier" : ""}> {handleAddToCart}</p>
+          <button> Valider mon panier  </button>
           </aside>
         </div>
       </main>
